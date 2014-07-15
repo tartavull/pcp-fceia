@@ -8,7 +8,8 @@ tablaPrecedencias = {
     'G','H';
     'H','I,J';
     'I','K';
-    'J','K'};
+    'J','K'
+    'K',''};
 
 tiempoTarea = {
     'A' 8;
