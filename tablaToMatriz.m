@@ -19,6 +19,7 @@ function matrizPrecedencias = tablaToMatriz( tablaPrecedencias )
    
     bg = biograph(matrizPrecedencias,[tablaPrecedencias{:,1}]);
     view(bg);
-
 end
+
+
 

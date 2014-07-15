@@ -23,3 +23,7 @@ tiempoTarea = {
     'I' 2;
     'J' 9;
     'K' 3};
+
+matrizPrecedencias = tablaToMatriz(tablaPrecedencias);
+
+totalTime = sum([tiempoTarea{:,2}]);
