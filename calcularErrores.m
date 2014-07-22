@@ -16,7 +16,7 @@ function [ SSE, MSE, MAD, MAPE ] = calcularErrores( demanda, pronostico)
  SSE = sum(e.^2);
  MSE = SSE / length(e);
  MAD = sum( abs(e) ) / length(e);
- MAPE= sum( abs( e ./ pronostico)) / length(e) *100;
+ MAPE= sum( abs( e ./ demanda(start+1:length(demanda)))) / length(e) *100;
  
 end
 
