@@ -1,9 +1,15 @@
-function promedios = promediosMoviles( datos, nPeriodo )
+function [promedios, laps] = promediosMoviles( datos, nPeriodo )
 
-promedios = zeros(size(datos));
+promedios = zeros(length(datos)-nPeriodo+1,1);
 
-for index = nPeriodo:length(datos)
+inicio = floor((nPeriodo-1)/2);
+final = length(datos) - (nPeriodo-1 - inicio);
 
-   promedios(index)=mean(datos((index+1)-nPeriodo:index));
+laps = inicio+1:final;
+
+for index = 1:length(datos)-nPeriodo+1
+
+   intervalo = index:index+nPeriodo-1;
+   promedios(index)=mean(datos(intervalo));
 
 end

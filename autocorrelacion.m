@@ -20,7 +20,7 @@ function [acf,lags,bounds] = autocorrelacion(data)
       end
       
       denominador=0;
-      for t = 1:n
+      for t = 1+k:n
           denominador = denominador + (data(t)-mediaMuestral)^2;
       end
       
