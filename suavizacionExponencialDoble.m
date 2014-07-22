@@ -1,6 +1,6 @@
 function [ pronostico ] = suavizacionExponencialDoble( data, alfa )
 %suavizacionExponencialDoble Calcula suavizacion exponencial doble
-%   Detailed explanation goes here
+
 
 
   n = length(data);
