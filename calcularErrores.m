@@ -1,4 +1,4 @@
-function [ SSE, MSE, MAD, MAPE ] = calcularErrores( demanda, pronostico)
+function [ME, SSE, MSE, MAD, SDE, MAPE] = calcularErrores( demanda, pronostico)
 %CALCULARERRORES SSE, MSE, MAD, MAPE
 %   Detailed explanation goes here
 
@@ -13,9 +13,11 @@ function [ SSE, MSE, MAD, MAPE ] = calcularErrores( demanda, pronostico)
      
  end
  
+ ME = sum(e) / length(e);
  SSE = sum(e.^2);
  MSE = SSE / length(e);
  MAD = sum( abs(e) ) / length(e);
+ SDE = std(e);
  MAPE= sum( abs( e ./ demanda(start+1:length(demanda)))) / length(e) *100;
  
 end
